@@ -260,15 +260,27 @@ h2 {
 }
 
 #about .dg {
-  background-image: url(../img/david.png);
-  background-size: cover;
-  background-position: 0px -20px;
+  background-image: url(../img/am-logo.png);
+  background-size: 70%;
+  /* background-position: 0px -10px; */
   background-repeat: no-repeat;
-  width: 15rem;
-  height: 18rem;
-  margin: auto;
-  transform: translate(40px, 0);
-  z-index: 99;
+  /* width: 15rem; */
+  /* height: 18rem; */
+  /* margin: auto; */
+  /* transform: translate(40px, 0); */
+  z-index: -99999;
+  animation: spin infinite linear 10s alternate;
+  bottom: 0px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(-5deg);
+  }
+
+  to {
+    transform: rotateZ(180deg);
+  }
 }
 
 #about p.show,
@@ -298,6 +310,7 @@ h2 {
   background-color: var(--portfolio-color);
   opacity: 1;
   background-position: 0 0, 20px 20px;
+  z-index: 99999;
 }
 
 .card {
