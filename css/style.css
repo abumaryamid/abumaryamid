@@ -187,14 +187,6 @@ h2 {
   color: var(--third-color);
 }
 
-#share-sossial-buttons img {
-  width: 35px;
-  padding: 5px;
-  border: 0;
-  box-shadow: 0;
-  display: inline;
-}
-
 .jumbotron svg path,
 /* #portfolio svg path, */
 #services svg#bottom path {
@@ -240,6 +232,11 @@ h2 {
 
 /* ABOUT */
 
+#about {
+  /* margin-bottom: -0.5px; */
+  /* min-height: 600px; */
+}
+
 #about,
 #portfolio {
   display: relative;
@@ -261,25 +258,20 @@ h2 {
 
 #about .dg {
   background-image: url(../img/am-logo.png);
-  background-size: 70%;
-  /* background-position: 0px -10px; */
+  background-size: 56vmin;
   background-repeat: no-repeat;
-  /* width: 15rem; */
-  /* height: 18rem; */
-  /* margin: auto; */
-  /* transform: translate(40px, 0); */
-  z-index: -99999;
   animation: spin infinite linear 10s alternate;
   bottom: 0px;
+  z-index: -999;
 }
 
 @keyframes spin {
   from {
-    transform: rotateZ(-5deg);
+    transform: rotate(0deg);
   }
 
   to {
-    transform: rotateZ(180deg);
+    transform: rotate(150deg);
   }
 }
 
@@ -310,7 +302,7 @@ h2 {
   background-color: var(--portfolio-color);
   opacity: 1;
   background-position: 0 0, 20px 20px;
-  z-index: 99999;
+  z-index: auto;
 }
 
 .card {
@@ -439,6 +431,16 @@ h2 {
 /* CONTACT */
 #contact {
   background-image: url(../img/email-pattern.png);
+  /* animation: scroll infinite 10s linear running; */
+}
+
+@keyframes scroll {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
 }
 
 #contact button {
@@ -620,8 +622,12 @@ footer {
 }
 
 @media screen and (min-width: 1350px) {
+  #about {
+    min-height: 600px;
+  }
+
   #about .dg {
-    height: 25rem;
+    background-size: 35vmin;
   }
   .top-about,
   .top-portfolio,
@@ -643,10 +649,6 @@ footer {
 }
 
 @media screen and (min-width: 1476px) {
-  #about {
-    min-height: 30rem;
-  }
-
   .top-about,
   .top-portfolio,
   .top-contact {
@@ -656,10 +658,6 @@ footer {
 }
 
 @media screen and (min-width: 1441px) {
-  #about .dg {
-    height: 30rem;
-  }
-
   .top-about,
   .top-portfolio,
   .top-contact {
@@ -685,7 +683,7 @@ footer {
 
 @media screen and (min-width: 1817px) {
   #about {
-    min-height: 30rem;
+    /* min-height: 30rem; */
   }
   #about .dg {
     height: 25rem;
