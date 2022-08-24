@@ -169,7 +169,7 @@ menu#contactMe.open > .trigger > i {
 
 .active {
   opacity: 1;
-  pointer-events: auto;
+  /* pointer-events: auto; */
   animation: bounce 0.8s linear infinite alternate;
 }
 
@@ -266,11 +266,16 @@ h2 {
 }
 
 @keyframes spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
 
-  to {
+  50% {
+    filter: invert() drop-shadow(2px 2px 3px black);
+    scale: 1.2;
+  }
+
+  100% {
     transform: rotate(150deg);
   }
 }
